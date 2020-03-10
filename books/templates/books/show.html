@@ -1,0 +1,10 @@
+{% extends "books/base.html" %}
+
+{% block content %}
+    <div>
+        <h1>Book name: {{ book.title }}</h1>
+        <h2>Author: <a  href="{% url "author_profile" book.author_id %}">{{ book.author }}</a> </h2>
+        <h1>Image</h1>
+        <img src="/static/imgs/{{ book.image  }}">
+    </div>
+{% endblock %}
